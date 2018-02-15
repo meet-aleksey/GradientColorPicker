@@ -27,10 +27,31 @@ unpack it and add to your project a reference to the assembly of the version of 
 Now you can create an instance of the GradientColorPicker and add to the form:
 
 ```C#
+// create a new instance of GradientColorPicker
 var gradientColorPicker = new GradientColorPicker();
+
+// for example, set the minimum number of items (colors)
 gradientColorPicker.MinimumColorCount = 4;
 
+// for example, randomize the postion and color of the items
+gradientColorPicker1.Randomize(true, true);
+
+// add the GradientColorPicker to the form
 Controls.Add(gradientColorPicker);
+
+// use the DrawLinearGradientToImage method to drawing linear gradient image
+// for example, draw a gradient in the background image of the form
+
+// create image 
+BackgroundImage = new Bitmap(ClientSize.Width, ClientSize.Height);
+// draw a gradient
+gradientColorPicker1.DrawLinearGradientToImage(BackgroundImage);
+
+// or DrawRadialGradientToImage method  to drawing radial gradient image
+// we need to specify a central point
+var centerPoint = new PointF(ClientSize.Width / 2, ClientSize.Height / 2);
+// draw a gradient
+gradientColorPicker1.DrawRadialGradientToImage(BackgroundImage, ClientRectangle, centerPoint);
 ```
 
 If you can not find the control on the toolbox in designer mode, you need to add GradientColorPicker to the toolbox:
