@@ -59,8 +59,8 @@ If you can not find the control on the toolbox in designer mode, you need to add
 
 [![How to add a control to the Visual Studio toolbox](youtube.jpg)](https://www.youtube.com/watch?v=Zasmw8zfIbI)
 
-1. Right-click on toolbox
-2. Select "Choose Items"
+1. Right-click on toolbox.
+2. Select "Choose Items".
 3. Browse the GradientColorPicker assembly on your computer.
 4. Add the item.
 5. Enjoy!
