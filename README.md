@@ -44,17 +44,20 @@ Controls.Add(gradientColorPicker);
 
 // create image 
 BackgroundImage = new Bitmap(ClientSize.Width, ClientSize.Height);
-// draw a gradient
+// draw a linear gradient
 gradientColorPicker1.DrawLinearGradientToImage(BackgroundImage);
 
 // or DrawRadialGradientToImage method  to drawing radial gradient image
+
 // we need to specify a central point
 var centerPoint = new PointF(ClientSize.Width / 2, ClientSize.Height / 2);
-// draw a gradient
+// draw a radial gradient
 gradientColorPicker1.DrawRadialGradientToImage(BackgroundImage, ClientRectangle, centerPoint);
 ```
 
 If you can not find the control on the toolbox in designer mode, you need to add GradientColorPicker to the toolbox:
+
+[![How to add a control to the Visual Studio toolbox](youtube.jpg)](https://www.youtube.com/watch?v=Zasmw8zfIbI)
 
 1. Right-click on toolbox
 2. Select "Choose Items"
